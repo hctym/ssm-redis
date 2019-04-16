@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>war</packaging>
+
+  <name>dobbo-test</name>
+  <groupId>com.hcytm</groupId>
+  <artifactId>dobbo-test</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+
+    <java-version>1.7</java-version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <servlet-api.version>3.0.1</servlet-api.version>
+    <jsp-api.version>2.1</jsp-api.version>
+    <spring.version>4.1.9.RELEASE</spring.version>
+    <mybatis-spring.version>1.2.2</mybatis-spring.version>
+    <mysql.version>5.1.15</mysql.version>
+    <jackson.version>2.5.0</jackson.version>
+  </properties>
+
+  <dependencies>
+   
+
+    <!-- spring -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
+    </dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context-support</artifactId>
+	    <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.retry</groupId>
+	    <artifactId>spring-retry</artifactId>
+	    <version>1.1.2.RELEASE</version>
+	</dependency>
+    <!-- mybatis 包 -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.2.8</version>
+    </dependency>
+
+    <!--mybatis spring 插件 -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+
+    <!-- mysql连接 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.34</version>
+    </dependency>
+
+    <!-- 数据源 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.27</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.4</version>
+    </dependency>
+
+    <!-- logback-->
+     <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+         <version>1.7.5</version>
+     </dependency>
+     <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-core</artifactId>
+         <version>1.0.13</version>
+     </dependency>
+     <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+         <version>1.0.13</version>
+     </dependency>
+     <dependency>
+         <groupId>org.logback-extensions</groupId>
+         <artifactId>logback-ext-spring</artifactId>
+         <version>0.1.1</version>
+     </dependency>
+
+    <!-- servlet -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <!-- json -->
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!-- 文件上传 -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>2.0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.0</version>
+    </dependency>
+    <dependency>
+      <artifactId>commons-logging</artifactId>
+      <groupId>commons-logging</groupId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+	    <groupId>commons-beanutils</groupId>
+	    <artifactId>commons-beanutils</artifactId>
+	    <version>1.7.0</version>
+	</dependency>
+    
+    <!--http-->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.4</version>
+    </dependency>
+    <dependency>
+	    <groupId>commons-httpclient</groupId>
+	    <artifactId>commons-httpclient</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+     <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpmime</artifactId>
+          <version>4.5.4</version>
+      </dependency>
+    
+     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+	<dependency>
+	    <groupId>dom4j</groupId>
+	    <artifactId>dom4j</artifactId>
+	    <version>1.6.1</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.0.1</version>
+		<scope>provided</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+	<dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>jsp-api</artifactId>
+	    <version>2.0</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+      <!-- 大帐房微票通 -->
+     <dependency>
+         <groupId>com.vpiaotong</groupId>
+         <artifactId>vpt-common-openapi</artifactId>
+         <version>1.1.0-SNAPSHOT</version>
+     </dependency>
+      <!-- 微信云支付  RSASSA_PSS_2048_SHA256(-->
+     <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-ext-jdk15on -->
+	<dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcprov-ext-jdk15on</artifactId>
+	    <version>1.52</version>
+	</dependency>
+
+     <dependency>
+         <groupId>joda-time</groupId>
+         <artifactId>joda-time</artifactId>
+         <version>2.9</version>
+     </dependency>
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.8.0</version>
+	</dependency>
+	<dependency>
+         <groupId>org.apache.httpcomponents</groupId>
+         <artifactId>fluent-hc</artifactId>
+         <version>4.3</version>
+     </dependency>
+     <!-- redis -->
+     <dependency>
+		<groupId>redis.clients</groupId>
+		<artifactId>jedis</artifactId>
+		<version>2.9.0</version>
+	</dependency>
+	<!-- 集成Redis -->
+    <dependency> 
+        <groupId>org.springframework.data</groupId> 
+        <artifactId>spring-data-redis</artifactId> 
+        <version>1.6.2.RELEASE</version> 
+    </dependency> 
+    
+    <!-- 集成易宝支付 -->
+    <dependency>
+    	<groupId>com.yeepay.g3.yop</groupId>
+	    <artifactId>yop-java-sdk</artifactId>
+	    <version>3.0.5</version>
+	</dependency>
+     <dependency>
+         <groupId>com.google.guava</groupId>
+         <artifactId>guava</artifactId>
+         <version>20.0</version>
+     </dependency>
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-collections4</artifactId>
+          <version>4.1</version>
+      </dependency>
+      
+      <!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
+	  <dependency>
+	      <groupId>org.apache.tika</groupId>
+	      <artifactId>tika-core</artifactId>
+	      <version>1.18</version>
+	  </dependency>
+	      
+      
+  </dependencies>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>${java-version}</source>
+          <target>${java-version}</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.10</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>8.1.16.v20140903</version>
+        <configuration>
+          <stopKey>xx</stopKey>
+          <stopPort>5666</stopPort>
+          <scanIntervalSeconds>0</scanIntervalSeconds>
+          <reload>manual</reload>
+          <!-- webAppConfig is is an alias for webApp-->
+          <webApp>
+            <contextPath>/api</contextPath>
+            <parentLoaderPriority>true</parentLoaderPriority>
+            <allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
+          </webApp>
+          <connectors>
+            <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+              <port>8080</port>
+              <maxIdleTime>60000</maxIdleTime>
+            </connector>
+
+          </connectors>
+        </configuration>
+      </plugin>
+
+      <!-- <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>1.3.1</version>
+        <executions>
+          <execution>
+            <id>enforce</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>display-info</goal>
+              <goal>enforce</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <failFast>true</failFast>
+          <rules>
+            <requireJavaVersion>
+              <version>1.6.0</version>
+            </requireJavaVersion>
+            <bannedDependencies>
+              <searchTransitive>true</searchTransitive>
+              <excludes>
+                <exclude>org.slf4j:slf4j-log4j12</exclude>
+              </excludes>
+              <message>Do Not use Log4J</message>
+            </bannedDependencies>
+          </rules>
+        </configuration> 
+      </plugin>-->
+
+    </plugins>
+  </build>
+    
+
+
+</project>

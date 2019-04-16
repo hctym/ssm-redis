@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="25000"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 是否使用插入数据后自增主键的值，需要配合keyProperty使用 -->
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
+    <typeAliases>
+       <typeAlias type="com.zhsj.api.bean.ChannelInfoBean" alias="channelInfo"/>
+       <typeAlias type="com.zhsj.api.bean.EleInvoiceBean" alias="eleInvoice"/>
+       <typeAlias type="com.zhsj.api.bean.MerchantAccountBean" alias="merchantAccount"/>
+       <typeAlias type="com.zhsj.api.bean.MerchantAccountBindRoleBean" alias="merchantAccountBindRole"/>
+       <typeAlias type="com.zhsj.api.bean.MerchantActivityCodeBean" alias="merchantActivityCode"/>
+       <typeAlias type="com.zhsj.api.bean.MerchantBean" alias="merchant"/>
+       <typeAlias type="com.zhsj.api.bean.MerchantExtendBean" alias="merchantExtend"/>
+       <typeAlias type="com.zhsj.api.bean.MerchantPaymentBean" alias="merchantPayment"/>
+       <typeAlias type="com.zhsj.api.bean.OrderBean" alias="order"/>
+       <typeAlias type="com.zhsj.api.bean.OrgBean" alias="org"/>
+       <typeAlias type="com.zhsj.api.bean.PaymentConfigBean" alias="paymentConfig"/>
+       <typeAlias type="com.zhsj.api.bean.PWTSettingsBean" alias="pwtSettings"/>
+       <typeAlias type="com.zhsj.api.bean.RoleBindChannelBean" alias="roleBindChannel"/>
+       <typeAlias type="com.zhsj.api.bean.StoreAccountSignBean" alias="storeAccountSign"/>
+       <typeAlias type="com.zhsj.api.bean.TerminalDeviceBean" alias="terminalDevice"/>
+       <typeAlias type="com.zhsj.api.bean.VersionInfoBean" alias="versionInfo"/>
+       <typeAlias type="com.zhsj.api.bean.dic.CityCodeBean" alias="cityCode"/>
+       <typeAlias type="com.zhsj.api.bean.mch.MerchantInvoiceBean" alias="merchantInvoice"/>
+       <typeAlias type="com.zhsj.api.bean.RefundCode" alias="refundCode"/>
+       <typeAlias type="com.zhsj.api.bean.UserBean" alias="userBean"/>
+       <typeAlias type="com.zhsj.api.bean.AliPayInfo" alias="aliPayInfo"/>
+       <typeAlias type="com.zhsj.api.bean.RoleBean" alias="role"/>
+       
+       <!-- vo -->
+       <typeAlias type="com.zhsj.api.bean.result.OrderSta" alias="orderSta"/>
+       <typeAlias type="com.zhsj.api.bean.result.RefundSta" alias="refundSta"/>
+       
+       <!-- ad -->
+       <typeAlias type="com.zhsj.api.bean.ad.AdChannel" alias="adChannel"/>
+       <typeAlias type="com.zhsj.api.bean.ad.Advertisement" alias="advertisement"/>
+       
+       <typeAlias type="com.zhsj.api.bean.MerchantImageBean" alias="merchantImage"/>
+       <typeAlias type="com.zhsj.api.bean.dic.BankUnionCodeBean" alias="bankUnionCode"/>
+       
+       <typeAlias type="com.zhsj.api.bean.MerchantWx" alias="merchantWx"/>
+       
+       <typeAlias type="com.zhsj.api.bean.data.DataBean" alias="data"/>
+       <typeAlias type="com.zhsj.api.bean.data.GoodDetailBean" alias="goodDetail"/>
+       <typeAlias type="com.zhsj.api.bean.data.RecordBean" alias="record"/>
+       <typeAlias type="com.zhsj.api.bean.data.StoreNoBindGoagoShopEntityId" alias="storeNoBindGoagoShopEntityId"/>
+       
+       <typeAlias type="com.zhsj.api.bean.MerchantYeepay" alias="merchantYeepay"/>
+       
+    </typeAliases> 
+</configuration>
